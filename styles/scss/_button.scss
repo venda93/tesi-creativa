@@ -1,0 +1,16 @@
+@use 'color' as *;
+.btn {
+  background-color: $dark-green;
+  color: $white;
+  border-radius: 0.3rem;
+  text-align: center;
+  display: block;
+  width: fit-content;
+}
+.btn.inverted {
+  background-color: $white;
+  color: $dark-green;
+}
+.btn.centered {
+  margin: auto;
+}

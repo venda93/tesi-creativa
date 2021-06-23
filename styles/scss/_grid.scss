@@ -1,0 +1,48 @@
+//modules
+@use 'mediaQueries' as media;
+
+//defining private variables
+$_gutter: 3rem;
+
+.container {
+  width: 100%;
+  max-width: 120rem;
+  padding-left: $_gutter;
+  padding-right: $_gutter;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$_gutter/2;
+  margin-right: -$_gutter/2;
+  justify-content: center;
+}
+.col {
+  flex: 0 0 auto;
+  display: flex;
+  max-width: 100%;
+  padding-right: $_gutter / 2;
+  padding-left: $_gutter / 2;
+  align-items: center;
+  @include media.desktop {
+    max-width: 50%;
+  }
+}
+.order-1 {
+  order: 1;
+}
+.order-1-desktop {
+  @include media.desktop {
+    order: 1;
+  }
+}
+.order-2 {
+  order: 2;
+}
+.order-2-desktop {
+  @include media.desktop {
+    order: 2;
+  }
+}

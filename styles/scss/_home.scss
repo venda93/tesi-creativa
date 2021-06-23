@@ -1,0 +1,44 @@
+//modules
+@use 'mediaQueries' as media;
+@use 'color' as *;
+
+.home section {
+  height: 90vh;
+  min-height: 50rem;
+  display: flex;
+  align-items: center;
+  scroll-snap-align: start;
+  img {
+    width: 100%;
+    max-width: 42rem;
+  }
+  @include media.desktop {
+    padding-top: 10vh;
+    height: 100vh;
+  }
+}
+footer {
+  text-align: center;
+  padding: 3rem 0 9rem 0;
+  img {
+    width: 100%;
+    padding: 2rem;
+    max-width: 50rem;
+  }
+}
+.hero {
+  text-align: center;
+  background-color: $dark-green;
+  color: $white;
+  img {
+    max-width: 50rem;
+  }
+  @include media.desktop {
+    min-height: 70rem;
+  }
+}
+.cta-tesi {
+  text-align: center;
+  background-color: $dark-green;
+  color: $white;
+}

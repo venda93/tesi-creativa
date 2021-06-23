@@ -1,0 +1,132 @@
+//modules
+@use 'color' as *;
+@use 'mediaQueries' as media;
+
+//burger icon variables
+$_line-height: 0.4rem;
+$_line-spacing: 0.4rem;
+
+//styles
+.main-header {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: $white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  .dark-bg {
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    background-color: $black;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  @include media.desktop {
+    top: 0;
+    bottom: initial;
+  }
+}
+.openedMenu .dark-bg {
+  opacity: 0.5;
+  pointer-events: visible;
+}
+.openedMenu.no-scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+.nav-buttons {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+}
+.img-link {
+  display: block;
+  width: fit-content;
+}
+.bg-white {
+  background-color: $white;
+  width: 100%;
+}
+.navbar {
+  position: relative;
+  @include media.desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.navbar-logo {
+  display: block;
+}
+.nav-menu {
+  overflow: auto;
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  @include media.desktop {
+    display: flex !important;
+    flex-direction: row;
+    order: 2;
+    width: 70%;
+  }
+}
+.burger-icon {
+  bottom: 50%;
+  right: 0;
+  transform: translateY(50%);
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  vertical-align: middle;
+  height: 6rem;
+  width: 6rem;
+  .line {
+    border-radius: 0.2rem;
+    display: block;
+    width: 3rem;
+    height: $_line-height;
+    margin: 0 auto;
+    background: black;
+    position: relative;
+    transition: all 0.2s ease;
+  }
+  .line + .line {
+    margin-top: $_line-spacing;
+  }
+  @include media.desktop {
+    display: none;
+  }
+}
+.nav-link {
+  width: fit-content;
+  color: $black;
+  display: block;
+  margin-left: auto;
+}
+.nav-btn {
+  margin-left: auto;
+}
+.openedMenu .burger-icon {
+  .middle-line {
+    background: transparent;
+  }
+  .top-line,
+  .bottom-line {
+    transform-origin: center;
+  }
+  .top-line {
+    margin-bottom: -($_line-height);
+    transform: rotate(45deg);
+  }
+  .bottom-line {
+    margin-top: -($_line-height + $_line-spacing);
+    transform: rotate(-45deg);
+  }
+}
