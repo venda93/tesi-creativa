@@ -1,3 +1,6 @@
+//modules
+@use 'color' as *;
+
 * {
   margin: 0;
   padding: 0;
@@ -6,4 +9,30 @@
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
+}
+.down-arrow {
+  position: relative;
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  margin: auto;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    height: 2rem;
+    width: 2rem;
+    transform-origin: left;
+    transform: translate(50%, -50%) rotate(45deg);
+    top: 15%;
+    border-bottom: 2px solid $black;
+    border-right: 2px solid $black;
+    transition: top 0.3s ease, border-color 0.3s ease;
+  }
+  &:hover {
+    &::before {
+      top: 50%;
+      border-color: $green;
+    }
+  }
 }
