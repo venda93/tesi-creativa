@@ -9,6 +9,7 @@ $_line-spacing: 0.4rem;
 //styles
 .main-header {
   position: fixed;
+  z-index: 1;
   bottom: 0;
   width: 100%;
   background-color: $white;
