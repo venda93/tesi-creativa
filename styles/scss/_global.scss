@@ -11,19 +11,21 @@ html {
   font-size: 62.5%;
 }
 .down-arrow {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
   display: block;
-  height: 4rem;
-  width: 4rem;
+  height: 4.2rem;
+  width: 4.2rem;
   margin: auto;
   &::before {
     content: "";
     position: absolute;
-    left: 0%;
     height: 2rem;
     width: 2rem;
-    transform-origin: left;
-    transform: translate(50%, -50%) rotate(45deg);
+    transform-origin: center;
+    transform: translateX(50%) rotate(45deg);
     top: 15%;
     border-bottom: 2px solid $black;
     border-right: 2px solid $black;

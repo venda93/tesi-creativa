@@ -3,6 +3,7 @@
 @use 'color' as *;
 
 .home section {
+  position: relative;
   height: 90vh;
   min-height: 50rem;
   display: flex;
@@ -15,6 +16,12 @@
   @include media.desktop {
     padding-top: 10vh;
     height: 100vh;
+  }
+}
+.text-wrapper {
+  text-align: center;
+  @include media.desktop {
+    text-align: initial;
   }
 }
 footer {

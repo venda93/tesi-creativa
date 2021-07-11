@@ -1,6 +1,7 @@
 //modules
 @use 'color' as *;
 @use 'mediaQueries' as media;
+@use 'keyframes' as *;
 
 //burger icon variables
 $_line-height: 0.4rem;
@@ -63,6 +64,7 @@ $_line-spacing: 0.4rem;
 }
 .navbar-logo {
   display: block;
+  width: 6rem;
 }
 .nav-menu {
   overflow: auto;
@@ -70,11 +72,14 @@ $_line-spacing: 0.4rem;
   display: none;
   flex-direction: column;
   align-items: flex-end;
+  padding-top: 2rem;
   @include media.desktop {
     display: flex !important;
     flex-direction: row;
+    justify-content: flex-end;
     order: 2;
     width: 70%;
+    padding-top: initial;
   }
 }
 .burger-icon {
@@ -105,14 +110,55 @@ $_line-spacing: 0.4rem;
     display: none;
   }
 }
+.nav-link-wrapper {
+  overflow-x: hidden;
+  @include media.desktop {
+    margin: 0 2rem;
+    padding: 1.3rem 0;
+  }
+}
 .nav-link {
+  padding: 1.2rem 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0.6rem 0;
+  position: relative;
   width: fit-content;
   color: $black;
   display: block;
   margin-left: auto;
+  &:hover {
+    &::before {
+      opacity: 1;
+      transition: opacity 0s;
+      transition-delay: 0s;
+      animation: hover-in 0.3s ease;
+    }
+  }
+  @include media.desktop {
+    padding: initial;
+    padding-bottom: 0.2rem;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      right: 0;
+      height: 0.2rem;
+      background-color: black;
+      opacity: 0;
+      transition: opacity 0s;
+      transition-delay: 0.3s;
+      animation: hover-out 0.3s ease;
+    }
+  }
 }
 .nav-btn {
   margin-left: auto;
+  @include media.desktop {
+    margin-left: 2rem;
+  }
 }
 .openedMenu .burger-icon {
   .middle-line {
