@@ -9,12 +9,12 @@
   display: flex;
   align-items: center;
   scroll-snap-align: start;
+  padding-bottom: 10vh;
   img {
     width: 100%;
     max-width: 42rem;
   }
   @include media.desktop {
-    padding-top: 10vh;
     height: 100vh;
   }
 }
