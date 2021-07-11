@@ -114,7 +114,6 @@ $_line-spacing: 0.4rem;
   overflow-x: hidden;
   @include media.desktop {
     margin: 0 2rem;
-    padding: 1.3rem 0;
   }
 }
 .nav-link {
@@ -154,7 +153,8 @@ $_line-spacing: 0.4rem;
     }
   }
 }
-.nav-btn {
+.btn.nav-btn {
+  margin: initial;
   margin-left: auto;
   @include media.desktop {
     margin-left: 2rem;
