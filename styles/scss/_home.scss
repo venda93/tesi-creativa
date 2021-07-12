@@ -2,7 +2,7 @@
 @use 'mediaQueries' as media;
 @use 'color' as *;
 
-.home section {
+section {
   position: relative;
   height: 80vh;
   min-height: 50rem;
@@ -16,10 +16,11 @@
   }
   @include media.desktop {
     height: 100vh;
+    padding: initial;
   }
 }
-.home .hero {
-  height: 90vh;
+.hero {
+  height: 100vh;
   min-height: 50rem;
 }
 .text-wrapper {
@@ -48,7 +49,7 @@ footer {
     min-height: 70rem;
   }
 }
-.cta-tesi {
+.cta {
   text-align: center;
   background-color: $dark-green;
   color: $white;

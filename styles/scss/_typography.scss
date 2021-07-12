@@ -60,7 +60,8 @@ li .link {
     font-size: 2rem;
   }
 }
-p {
+p,
+li {
   font-size: 1.5rem;
   margin-bottom: 2rem;
   @include media.tablet {
