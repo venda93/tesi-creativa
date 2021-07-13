@@ -4,8 +4,7 @@
 
 section {
   position: relative;
-  height: 85vh;
-  min-height: 50rem;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   scroll-snap-align: start;
@@ -18,10 +17,6 @@ section {
     height: 100vh;
     padding: initial;
   }
-}
-.stage .portfolio {
-  height: initial;
-  min-height: 80vh;
 }
 .hero {
   height: 100vh;
