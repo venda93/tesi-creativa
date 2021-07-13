@@ -1,0 +1,547 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css");
+@font-face {
+  font-family: 'Guardian Egypt';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Guardian Egypt"), url("../font/Guardian-EgypTT-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Graphik Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Graphik Regular"), url("../font/Graphik-Regular-Web.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: 'Graphik Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Graphik Medium"), url("../font/Graphik-Medium-Web.woff2") format("woff2");
+}
+
+.nerdityart-page {
+  max-width: 140rem;
+}
+
+.nerdityart-page .rounded-btn {
+  position: relative;
+  font-weight: bold;
+  border-radius: 2.4rem;
+  background-color: transparent;
+}
+
+.nerdityart-page .rounded-btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.nerdityart-page .rounded-btn::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: -1;
+  opacity: 0;
+  border-radius: 5rem;
+  -webkit-transition: all 0.3s cubic-bezier(0, 0, 0.42, 2.42), opacity 0.15s ease-out, background-color 0.15s ease-out;
+  transition: all 0.3s cubic-bezier(0, 0, 0.42, 2.42), opacity 0.15s ease-out, background-color 0.15s ease-out;
+}
+
+.nerdityart-page .rounded-btn:hover {
+  color: #222;
+}
+
+.nerdityart-page .rounded-btn:hover::before {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ededed;
+  opacity: 1;
+}
+
+.nerdityart-page .big-btn {
+  font-size: 1.6rem;
+  padding: 1.2rem;
+}
+
+.nerdityart-page .small-btn {
+  padding: .9rem 1.2rem;
+  -webkit-transition: padding 0.2s cubic-bezier(0.345, 0.115, 0.135, 1.42);
+  transition: padding 0.2s cubic-bezier(0.345, 0.115, 0.135, 1.42);
+}
+
+.nerdityart-page .small-btn svg {
+  vertical-align: top;
+  margin-right: .6rem;
+}
+
+.nerdityart-page .small-btn p {
+  margin: 0;
+}
+
+.nerdityart-page a, .nerdityart-page span {
+  color: #222;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+.nerdityart-page a:hover {
+  color: #595959;
+}
+
+.nerdityart-page header {
+  margin: 2.4rem 0;
+}
+
+.nerdityart-page header .profile-pic {
+  height: 8.5rem;
+  border-radius: .6rem;
+}
+
+@media (min-width: 768px) {
+  .nerdityart-page header .profile-pic {
+    height: 12rem;
+  }
+}
+
+.nerdityart-page header .profile-info {
+  padding-left: 1.8rem;
+}
+
+.nerdityart-page header .profile-info h1 {
+  font-family: Guardian Egypt;
+  line-height: 2.8rem;
+  font-size: 2.4rem;
+}
+
+@media (min-width: 576px) {
+  .nerdityart-page header .profile-info h1 {
+    line-height: 3.6rem;
+    font-size: 3.2rem;
+  }
+}
+
+.nerdityart-page header .profile-info p {
+  color: #595959;
+  line-height: 1.6rem;
+  font-size: 1.3rem;
+}
+
+.nerdityart-page header .profile-info span {
+  color: #e1e3df;
+}
+
+.nerdityart-page header .profile-info .rating {
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.nerdityart-page header .artist-info {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.nerdityart-page header .artist-info .artist-pic {
+  width: 6rem;
+  border-radius: 3rem;
+}
+
+.nerdityart-page main {
+  padding: 0 2.4rem;
+}
+
+.nerdityart-page main h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nerdityart-page main .dropdown .dropdown-toggle {
+  z-index: 11;
+}
+
+.nerdityart-page main .dropdown .dropdown-toggle[aria-expanded=false] + .dropdown-container {
+  opacity: 0;
+  -webkit-transform: scaleX(0.5) scaleY(0.2) !important;
+          transform: scaleX(0.5) scaleY(0.2) !important;
+}
+
+.nerdityart-page main .dropdown .dropdown-toggle[aria-expanded=true] + .dropdown-container {
+  opacity: 1;
+  -webkit-transform: scaleX(1) scaleY(1) !important;
+          transform: scaleX(1) scaleY(1) !important;
+  -webkit-transition: opacity 180ms ease-out, -webkit-transform 180ms cubic-bezier(0.175, 0.885, 0.4, 1.1);
+  transition: opacity 180ms ease-out, -webkit-transform 180ms cubic-bezier(0.175, 0.885, 0.4, 1.1);
+  transition: opacity 180ms ease-out, transform 180ms cubic-bezier(0.175, 0.885, 0.4, 1.1);
+  transition: opacity 180ms ease-out, transform 180ms cubic-bezier(0.175, 0.885, 0.4, 1.1), -webkit-transform 180ms cubic-bezier(0.175, 0.885, 0.4, 1.1);
+}
+
+.nerdityart-page main .dropdown .dropdown-toggle:focus::before {
+  background-color: transparent;
+}
+
+.nerdityart-page main .dropdown .dropdown-container {
+  display: block;
+  position: absolute;
+  top: 0;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+  width: 100%;
+  padding-top: 5rem;
+  z-index: 10 !important;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(34, 34, 34, 0.15);
+  -webkit-box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+          box-shadow: 0 4px 20px rgba(34, 34, 34, 0.15);
+}
+
+.nerdityart-page main .dropdown .dropdown-container .active {
+  background-color: transparent;
+  color: #222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nerdityart-page main .dropdown .dropdown-container .active::after {
+  content: "";
+  background-image: url("../img/spunta.svg");
+  background-size: 100%;
+  width: 24px;
+  height: 18px;
+}
+
+.nerdityart-page main .dropdown .dropdown-container .dropdown-item {
+  padding: 1.2rem 1.8rem;
+  font-size: 1.6rem;
+}
+
+.nerdityart-page main .dropdown .dropdown-container .dropdown-item:hover {
+  background-color: #eaeaea;
+  color: #222;
+}
+
+.nerdityart-page main .aside {
+  padding: 0;
+  margin-right: 2.4rem;
+}
+
+.nerdityart-page main .aside .search-item {
+  margin-bottom: 1.8rem;
+  border-radius: 9.6rem;
+  -webkit-box-shadow: 1px 2px 4px rgba(34, 34, 34, 0.1) inset;
+          box-shadow: 1px 2px 4px rgba(34, 34, 34, 0.1) inset;
+  background-color: transparent;
+}
+
+.nerdityart-page main .aside .search-item input {
+  border: 1px solid rgba(34, 34, 34, 0.15);
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 9.6rem;
+  border-bottom-left-radius: 9.6rem;
+  padding: .9rem 4.2rem .9rem 1.8rem;
+  font-size: 1.6rem;
+  height: 4.8rem;
+  width: 100%;
+  background-color: transparent;
+  outline: none;
+}
+
+.nerdityart-page main .aside .search-item input:hover {
+  border: 1px solid rgba(34, 34, 34, 0.5);
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 9.6rem;
+  border-bottom-left-radius: 9.6rem;
+}
+
+.nerdityart-page main .aside .search-item input:hover + .search-btn {
+  border: 1px solid rgba(34, 34, 34, 0.5);
+  border-left-width: 0;
+  border-top-right-radius: 9.6rem;
+  border-bottom-right-radius: 9.6rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.nerdityart-page main .aside .search-item input:focus {
+  border: 1px solid #222222;
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 9.6rem;
+  border-bottom-left-radius: 9.6rem;
+}
+
+.nerdityart-page main .aside .search-item input:focus + .search-btn {
+  border: 1px solid #222222;
+  border-left-width: 0;
+  border-top-right-radius: 9.6rem;
+  border-bottom-right-radius: 9.6rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.nerdityart-page main .aside .search-item input:focus + .search-btn svg {
+  color: white;
+}
+
+.nerdityart-page main .aside .search-item input:focus + .search-btn::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.nerdityart-page main .aside .search-item .search-btn {
+  position: relative;
+  -webkit-transition: none;
+  transition: none;
+  padding: 1.1rem 2.1rem 1.1rem 1.5rem !important;
+  border: 1px solid rgba(34, 34, 34, 0.15);
+  border-left-width: 0;
+  border-top-right-radius: 9.6rem;
+  border-bottom-right-radius: 9.6rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: transparent;
+}
+
+.nerdityart-page main .aside .search-item .search-btn svg {
+  fill: currentColor;
+  color: #222;
+}
+
+.nerdityart-page main .aside .search-item .search-btn::before {
+  content: "";
+  opacity: 0;
+  background: #222222;
+  border-radius: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transition: opacity 150ms ease-out, border-radius 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), -webkit-transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), -webkit-box-shadow 200ms ease-out;
+  transition: opacity 150ms ease-out, border-radius 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), -webkit-transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), -webkit-box-shadow 200ms ease-out;
+  transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), opacity 150ms ease-out, border-radius 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), box-shadow 200ms ease-out;
+  transition: transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), opacity 150ms ease-out, border-radius 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), box-shadow 200ms ease-out, -webkit-transform 200ms cubic-bezier(0.345, 0.115, 0.135, 1.42), -webkit-box-shadow 200ms ease-out;
+}
+
+.nerdityart-page main .aside .search-item .search-btn:hover::before {
+  opacity: 0.075;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.nerdityart-page main .aside .search-item .search-btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.nerdityart-page main .aside .search-item .search-btn:focus svg {
+  color: white;
+}
+
+.nerdityart-page main .aside .search-item .search-btn:focus::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+}
+
+.nerdityart-page main .aside .categories {
+  padding-left: 0;
+  list-style: none;
+}
+
+.nerdityart-page main .aside .categories li a {
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.nerdityart-page main .aside .categories li a:hover {
+  color: #595959;
+  text-decoration: none;
+}
+
+.nerdityart-page main .aside .categories li a p {
+  margin-bottom: 0;
+  padding: 1.2rem 0;
+}
+
+.nerdityart-page main .aside .categories li a .category {
+  border-right: 2px solid #dedede;
+}
+
+.nerdityart-page main .aside .categories li a .category:hover {
+  border-right: 2px solid #808080;
+}
+
+.nerdityart-page main .aside .categories li a .category:last-child {
+  padding-right: 1.2rem;
+}
+
+.nerdityart-page main .aside .categories li a .active, .nerdityart-page main .aside .categories li a .active:hover {
+  border-right: 2px solid #222;
+}
+
+.nerdityart-page main .aside .contact-btn {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: .8rem 1.2rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.nerdityart-page main .aside .contact-btn svg {
+  vertical-align: top;
+  margin-top: .2rem;
+  margin-right: .4rem;
+  width: 1.5rem;
+}
+
+.nerdityart-page main .aside .contact-btn:hover {
+  background-color: #ededed;
+  color: #222;
+}
+
+.nerdityart-page main .aside .divider {
+  margin: 3rem 0;
+}
+
+.nerdityart-page main .aside .bottom-links a {
+  font-size: 1.4rem;
+  text-decoration: underline;
+}
+
+@media (min-width: 992px) {
+  .nerdityart-page main .aside {
+    -ms-flex-preferred-size: 25rem;
+        flex-basis: 25rem;
+  }
+}
+
+.nerdityart-page main .product-gallery .product {
+  position: relative;
+  padding: .9rem;
+  border-radius: .9rem;
+}
+
+.nerdityart-page main .product-gallery .product a {
+  text-decoration: none;
+}
+
+.nerdityart-page main .product-gallery .product::before {
+  content: "";
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  bottom: .5rem;
+  right: .5rem;
+  z-index: -1;
+  opacity: 0;
+  border-radius: .9rem;
+  -webkit-box-shadow: 0 2px 18px rgba(34, 34, 34, 0.2);
+          box-shadow: 0 2px 18px rgba(34, 34, 34, 0.2);
+  -webkit-transition: all .2s ease, opacity .15s ease-out;
+  transition: all .2s ease, opacity .15s ease-out;
+}
+
+.nerdityart-page main .product-gallery .product .favourite {
+  position: absolute;
+  top: 1.8rem;
+  right: 1.8rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.nerdityart-page main .product-gallery .product .favourite::after {
+  content: "";
+  background-image: url(../img/heart.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 1px solid rgba(34, 34, 34, 0.15);
+  border-radius: 1.6rem;
+  background-color: white;
+  z-index: 1;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+  opacity: 0;
+}
+
+.nerdityart-page main .product-gallery .product .favourite:hover::after {
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+}
+
+.nerdityart-page main .product-gallery .product img {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.nerdityart-page main .product-gallery .product h3 {
+  line-height: 1.8rem;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nerdityart-page main .product-gallery .product p {
+  margin-bottom: 0;
+  line-height: 2rem;
+  font-size: 1.6rem;
+  font-family: Graphik Medium;
+}
+
+.nerdityart-page main .product-gallery .product:hover::before {
+  opacity: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.nerdityart-page main .product-gallery .product:hover .favourite::after {
+  -webkit-transition: opacity .2s ease-out, -webkit-transform .2s ease-out;
+  transition: opacity .2s ease-out, -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out, opacity .2s ease-out;
+  transition: transform .2s ease-out, opacity .2s ease-out, -webkit-transform .2s ease-out;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Graphik Regular, sans-serif;
+  color: #222;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=global.css.map */

@@ -19,6 +19,10 @@ section {
     padding: initial;
   }
 }
+.stage .portfolio {
+  height: initial;
+  min-height: 80vh;
+}
 .hero {
   height: 100vh;
   min-height: 50rem;
@@ -53,4 +57,37 @@ footer {
   text-align: center;
   background-color: $dark-green;
   color: $white;
+  height: 50vh;
+}
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  @include media.tablet {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include media.desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+.box {
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    img {
+      width: 85%;
+    }
+  }
+  &::before {
+    content: "";
+    padding-top: 100%;
+  }
+  img {
+    width: 75%;
+    transition: width 0.3s ease;
+  }
 }

@@ -1,0 +1,159 @@
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+//Styles
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.hero-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/queen-band.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Times New Romans', serif;
+    height: 100vh;
+    .title{
+        text-align: center;
+        h1{
+            font-size: 6rem;
+        }
+        .arrow-down{
+            border:  solid #fff;
+            border-width: 0 4px 4px 0;
+            transform: rotate(45deg);
+            display: inline-block;
+            padding: 10px;
+        }
+    }
+}
+.section-title{
+    border-bottom: 1px solid #fff;
+    padding: 1rem 1rem .5rem;
+    margin-bottom: 2rem;
+}
+section{
+    margin-bottom: 4rem;
+    h3{
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    a{
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    img{
+        width: 100%;
+    }
+}
+
+//Carousel
+@media (min-width: 768px) {
+    $itemsPerSlide: 3; //put here the number of items per slide
+    $outerItemsPosition: -(100% /$itemsPerSlide);
+
+    .carousel-inner{
+        /* show n items per slide */
+        .active,
+        .active + .carousel-item,
+        .active + .carousel-item + .carousel-item
+        //add the line below with an additional "+ .carousel-item " for each item you want to be displayed in one slide
+        //, .carousel-inner .active + .carousel-item + .carousel-item 
+        {
+            display: block;
+        }
+        /* deactivate transitions on the n displayed items when left/right buttons are not activated*/
+     .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+     .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+     .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+            transition: none;
+        }
+        /* remove movement from .active previous and next items */
+     .carousel-item-next,
+     .carousel-item-prev {
+          position: relative;
+          transform: translateX(0);
+        }
+        /*position the outside right item */
+     .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+            position: absolute;
+            right: $outerItemsPosition;
+            display: block;
+        }
+        /* position the outside left item */
+     .carousel-item-prev.carousel-item-right {
+            position: absolute;
+            left: $outerItemsPosition;
+            display: block;
+        }
+    }
+    /* move left */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        transform: translateX(-100%);
+    }
+    /* move right */
+    .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        transform: translateX(100%);
+    }
+}
+.carousel-control-prev{
+    left: -10%;
+    .arrow-left{
+        border:  solid #fff;
+        border-width: 0 0 4px 4px;
+        transform: rotate(45deg);
+        display: inline-block;
+        padding: 10px;
+    }
+}
+.carousel-control-next{
+    right: -10%;
+    .arrow-right{
+        border:  solid #fff;
+        border-width: 0 4px 4px 0;
+        transform: rotate(-45deg);
+        display: inline-block;
+        padding: 10px;
+    }
+}
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 2rem;
+    height: 30vh;
+    p{
+        text-align: center;
+        margin: 0;
+    }
+    .logo{
+        width: 8rem;
+        margin-left: 1rem;
+        margin-right: 3rem;
+    }
+    .social-icon{
+        width: 2rem;
+        margin: 1rem;
+    }
+    @media (min-width:768px){
+        flex-direction: row;
+        height: 15vh;
+    }
+}

@@ -1,0 +1,1156 @@
+@font-face {
+  font-family: "Inter";
+  src: url("https://assets.website-files.com/5ebe9ac00bb8ee01c0aa44a6/5ebe9ac00bb8ee8f65aa44d4_Inter.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("https://assets.website-files.com/5ebe9ac00bb8ee01c0aa44a6/5ebe9ac00bb8ee6f47aa44d7_Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("https://assets.website-files.com/5ebe9ac00bb8ee01c0aa44a6/5ebe9ac00bb8eea34baa44d1_Inter-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Euclidcirculara";
+  src: url("https://assets.website-files.com/5ebe9ac00bb8ee01c0aa44a6/5ebe9ac00bb8ee4cc5aa44cf_EuclidCircularA-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+}
+@font-face {
+  font-family: "Euclidcirculara";
+  src: url("https://assets.website-files.com/5ebe9ac00bb8ee01c0aa44a6/5ebe9ac00bb8eeead9aa44de_EuclidCircularA-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+}
+@keyframes hover-in {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes hover-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes lines-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+.vauban-home .header-hover {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 10vh;
+  z-index: 8;
+  pointer-events: none;
+}
+@media (min-width: 992px) {
+  .vauban-home .header-hover {
+    display: block;
+  }
+}
+.vauban-home .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 10vh;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  transition: top 0.6s ease;
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header {
+    position: initial;
+  }
+}
+.vauban-home .main-header .navbar {
+  position: relative;
+  max-width: 144rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.2rem 2rem;
+  margin: auto;
+}
+@media (min-width: 768px) {
+  .vauban-home .main-header .navbar {
+    padding: 3.2rem 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header .navbar {
+    padding: 3.4rem 6rem;
+  }
+}
+.vauban-home .main-header .navbar .burger span {
+  display: block;
+  width: 3.9rem;
+  height: 0.2rem;
+  margin: 0.3rem 0;
+  background-color: #fff;
+  cursor: pointer;
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header .navbar .burger {
+    display: none;
+  }
+}
+.vauban-home .main-header .navbar .open {
+  opacity: 1 !important;
+  transform: translateX(0%) !important;
+}
+.vauban-home .main-header .navbar .mobile-nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  max-height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  transform: translateX(100%);
+  opacity: 0;
+  background-color: #000;
+  padding: 0 2rem 8rem;
+  transition: all 0.3s ease;
+}
+@media (min-width: 768px) {
+  .vauban-home .main-header .navbar .mobile-nav-menu {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header .navbar .mobile-nav-menu {
+    display: none;
+  }
+}
+.vauban-home .main-header .navbar .mobile-nav-menu .heading-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3.2rem;
+  margin-bottom: 9.6rem;
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header .navbar .mobile-nav-menu .heading-container {
+    padding-top: 3.4rem;
+  }
+}
+.vauban-home .main-header .navbar .mobile-nav-menu .heading-container .close-btn .line1, .vauban-home .main-header .navbar .mobile-nav-menu .heading-container .close-btn .line2 {
+  display: block;
+  width: 3.9rem;
+  height: 0.2rem;
+  background-color: #fff;
+  cursor: pointer;
+}
+.vauban-home .main-header .navbar .mobile-nav-menu .heading-container .close-btn .line1 {
+  transform: rotatez(45deg) translateY(100%);
+}
+.vauban-home .main-header .navbar .mobile-nav-menu .heading-container .close-btn .line2 {
+  transform: rotatez(-45deg) translateY(-100%);
+}
+.vauban-home .main-header .navbar .mobile-nav-menu .link-arrow {
+  padding: 2.4rem 0;
+}
+.vauban-home .main-header .navbar .mobile-nav-menu .mobile-menu-col {
+  padding-bottom: 4rem;
+  display: flex;
+}
+.vauban-home .main-header .navbar .mobile-nav-menu .bottom-line {
+  border-bottom: 1px solid #fff;
+}
+.vauban-home .main-header .navbar .mobile-nav-menu .login-menu {
+  padding: 4rem 0 2.4rem;
+}
+.vauban-home .main-header .navbar .nav-menu {
+  display: none;
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header .navbar .nav-menu {
+    display: flex;
+  }
+}
+.vauban-home .main-header .navbar .nav-links, .vauban-home .main-header .navbar .login-links {
+  display: flex;
+  margin-left: 10rem;
+  list-style: none;
+}
+.vauban-home .main-header .navbar .nav-links li, .vauban-home .main-header .navbar .login-links li {
+  display: block;
+  padding-bottom: 0.4rem;
+  margin-left: 2.8rem;
+}
+.vauban-home .main-header .navbar .nav-links li .overflow, .vauban-home .main-header .navbar .login-links li .overflow {
+  padding-bottom: 0.2rem;
+  overflow-x: hidden;
+}
+.vauban-home .main-header .navbar .nav-links li:hover .main-link::before, .vauban-home .main-header .navbar .login-links li:hover .main-link::before {
+  opacity: 1;
+  transition: opacity 0s;
+  transition-delay: 0s;
+  animation: hover-in 0.3s ease;
+}
+.vauban-home .main-header .navbar .nav-links li .main-link, .vauban-home .main-header .navbar .login-links li .main-link {
+  margin-bottom: 0.4rem;
+}
+.vauban-home .main-header .navbar .nav-links li .main-link::before, .vauban-home .main-header .navbar .login-links li .main-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.2rem;
+  opacity: 0;
+  background-color: #fff;
+  transition: opacity 0s;
+  transition-delay: 0.3s;
+  animation: hover-out 0.3s ease;
+}
+.vauban-home .main-header .navbar .main-link {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  padding-bottom: 0.2rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header .navbar .main-link {
+    display: inline;
+    font-size: 1.4rem;
+  }
+}
+.vauban-home .main-header .navbar .nav-links li {
+  position: relative;
+}
+.vauban-home .main-header .navbar .nav-links li .learn-box {
+  width: 28.8rem;
+}
+.vauban-home .main-header .navbar .nav-links li:hover .dropdown-content {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+}
+.vauban-home .main-header .navbar .dropdown-content {
+  display: inline-block;
+}
+@media (max-width: 992px) {
+  .vauban-home .main-header .navbar .dropdown-content {
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header .navbar .dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: -2rem;
+    z-index: 1;
+    visibility: hidden;
+    padding-top: 1.6rem;
+    opacity: 0;
+    transform: translateY(4rem);
+    transition: all 0.3s ease;
+  }
+}
+.vauban-home .main-header .navbar .dropdown-content ul {
+  list-style: none;
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header .navbar .dropdown-content ul {
+    border-radius: 3px;
+    padding: 24px 20px 16px;
+    background-color: #0d0d0d;
+  }
+}
+.vauban-home .main-header .navbar .dropdown-content ul li {
+  padding-bottom: 0;
+  margin-bottom: 2.4rem;
+  margin-left: 0;
+  width: 100%;
+  overflow: visible;
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header .navbar .dropdown-content ul li {
+    margin-bottom: 1.6rem;
+  }
+}
+.vauban-home .main-header .navbar .dropdown-content ul li a {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-weight: 400;
+  color: #dbdbdb;
+  text-decoration: none;
+}
+@media (min-width: 992px) {
+  .vauban-home .main-header .navbar .dropdown-content ul li a {
+    white-space: nowrap;
+  }
+}
+.vauban-home .main-header .navbar .dropdown-content ul li a:hover {
+  color: #ff6f43;
+}
+.vauban-home .main-header .navbar .dropdown-content ul li p {
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  margin: 0.8rem 0;
+  color: #888;
+}
+.vauban-home main .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 90vh;
+  min-width: 100%;
+  max-width: 90rem;
+  padding: 0;
+  margin: auto;
+}
+@media (min-width: 480px) {
+  .vauban-home main .container {
+    justify-content: space-between;
+    min-height: 75vh;
+  }
+}
+@media (min-width: 768px) {
+  .vauban-home main .container {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .container {
+    display: block;
+    min-height: 100%;
+    min-width: 0;
+    max-width: 144rem;
+    padding: 0 6rem;
+  }
+}
+.vauban-home main .container h1, .vauban-home main .container h2 {
+  font-family: Euclidcirculara, sans-serif;
+  font-size: 3.5rem;
+  line-height: 4.2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+.vauban-home main .container h1 span, .vauban-home main .container h2 span {
+  color: #888;
+}
+@media (min-width: 992px) {
+  .vauban-home main .container h1, .vauban-home main .container h2 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+}
+.vauban-home main .container h1 {
+  margin-bottom: 2.4rem;
+  color: #fff;
+}
+@media (min-width: 992px) {
+  .vauban-home main .container h1 {
+    margin-bottom: 3.2rem;
+  }
+}
+.vauban-home main .container h2 {
+  margin-bottom: 1.6rem;
+  color: #1a1a1a;
+}
+.vauban-home main .container .subhead {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  margin-bottom: 2.4rem;
+  color: #1a1a1a;
+}
+@media (min-width: 992px) {
+  .vauban-home main .container .subhead {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+    margin-bottom: 3rem;
+  }
+}
+.vauban-home main .container .link-arrow {
+  padding: 0;
+}
+@media (min-width: 992px) {
+  .vauban-home main .container .link-arrow a {
+    text-decoration: none;
+    font-size: 2.4rem;
+  }
+  .vauban-home main .container .link-arrow a:hover .arrow {
+    margin-left: 1.6rem;
+  }
+  .vauban-home main .container .link-arrow .arrow {
+    height: 0.8rem;
+    width: 0.8rem;
+    transition: all 0.4s ease;
+  }
+  .vauban-home main .container .link-arrow .arrow::before {
+    top: 1px;
+    height: 3px;
+    width: 110%;
+  }
+  .vauban-home main .container .link-arrow .arrow::after {
+    border-width: 3px 3px 0 0;
+  }
+}
+.vauban-home main .container .title {
+  max-width: 52rem;
+  padding: 10% 2rem 0;
+}
+@media (min-width: 768px) {
+  .vauban-home main .container .title {
+    padding: 0 6rem;
+    max-width: 50rem;
+    padding: 0;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .container .title {
+    max-width: 72rem;
+    padding: 0;
+  }
+}
+.vauban-home main .wealth-section {
+  padding-top: 13vh;
+  padding-bottom: 10vh;
+  min-height: 100vh;
+  background-color: #000;
+}
+@media (min-width: 992px) {
+  .vauban-home main .wealth-section {
+    padding-top: 14.6vw;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .wealth-section {
+    padding-top: 11vh;
+    min-height: 90vh;
+  }
+}
+.vauban-home main .wealth-section .img-container {
+  padding-top: 6rem;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.vauban-home main .wealth-section .img-container::-webkit-scrollbar {
+  display: none;
+}
+.vauban-home main .wealth-section .img-container::before, .vauban-home main .wealth-section .img-container::after {
+  content: "";
+  display: block;
+  width: calc(220vw - 4rem);
+  height: 0.1rem;
+  margin: 0 2rem;
+  background-color: #fff;
+  animation: lines-in 0.7s ease-out;
+}
+@media (min-width: 480px) {
+  .vauban-home main .wealth-section .img-container::before, .vauban-home main .wealth-section .img-container::after {
+    width: calc(150vw - 4rem);
+  }
+}
+@media (min-width: 768px) {
+  .vauban-home main .wealth-section .img-container::before, .vauban-home main .wealth-section .img-container::after {
+    width: 100%;
+    margin: 0;
+  }
+}
+.vauban-home main .wealth-section .img-container img {
+  width: 220vw;
+  padding: 2rem;
+  opacity: 0;
+  animation: opacity 0.7s ease-out;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+}
+@media (min-width: 480px) {
+  .vauban-home main .wealth-section .img-container img {
+    width: 150vw;
+  }
+}
+@media (min-width: 768px) {
+  .vauban-home main .wealth-section .img-container img {
+    max-width: 100%;
+    padding: 3rem;
+  }
+}
+.vauban-home main .funds-section {
+  padding: 8rem 0 12rem;
+  position: relative;
+  overflow: hidden;
+}
+.vauban-home main .funds-section .container {
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .vauban-home main .funds-section .container {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .funds-section .container {
+    padding: 0 6rem;
+  }
+}
+.vauban-home main .funds-section .container h2 {
+  margin-bottom: 4.8rem;
+}
+@media (min-width: 768px) {
+  .vauban-home main .funds-section .container h2 {
+    margin-bottom: 1.6rem;
+  }
+}
+.vauban-home main .funds-section .container .subhead {
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .vauban-home main .funds-section .container .subhead {
+    margin-bottom: 3rem;
+  }
+}
+.vauban-home main .funds-section .container .row, .vauban-home main .funds-section .container .row--2 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  margin-bottom: -2.4rem;
+}
+@media (min-width: 992px) {
+  .vauban-home main .funds-section .container .row, .vauban-home main .funds-section .container .row--2 {
+    margin-top: 6.4rem;
+  }
+}
+.vauban-home main .funds-section .container .row--2 {
+  justify-content: start;
+  margin-top: 10rem;
+}
+@media (min-width: 768px) {
+  .vauban-home main .funds-section .container .row--2 {
+    padding: 0;
+    margin-top: 12rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .funds-section .container .row--2 {
+    padding: 0;
+    margin-top: 20rem;
+  }
+}
+.vauban-home main .funds-section .container .row .col, .vauban-home main .funds-section .container .row--2 .col {
+  padding-bottom: 2.4rem;
+}
+@media (max-width: 480px) {
+  .vauban-home main .funds-section .container .row .col, .vauban-home main .funds-section .container .row--2 .col {
+    width: 100%;
+  }
+}
+@media (min-width: 480px) {
+  .vauban-home main .funds-section .container .row .col, .vauban-home main .funds-section .container .row--2 .col {
+    width: 50%;
+    padding: 0 4rem 4rem 0;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .funds-section .container .row .col, .vauban-home main .funds-section .container .row--2 .col {
+    width: 25%;
+    padding: 0;
+    padding-right: 0.8rem;
+  }
+}
+.vauban-home main .funds-section .container .row .list-line, .vauban-home main .funds-section .container .row--2 .list-line {
+  width: 100%;
+  padding: 0 0 2.1rem 0;
+}
+@media (min-width: 992px) {
+  .vauban-home main .funds-section .container .row .list-line, .vauban-home main .funds-section .container .row--2 .list-line {
+    width: 50%;
+    padding: 0 2.4rem 3.2rem 0;
+  }
+}
+.vauban-home main .funds-section .container .row img, .vauban-home main .funds-section .container .row--2 img, .vauban-home main .funds-section .container .row p, .vauban-home main .funds-section .container .row--2 p {
+  display: inline-block;
+  vertical-align: top;
+}
+.vauban-home main .funds-section .container .row img, .vauban-home main .funds-section .container .row--2 img {
+  margin-right: 2.4rem;
+}
+.vauban-home main .funds-section .container .row p, .vauban-home main .funds-section .container .row--2 p {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 2.1rem;
+  color: #1a1a1a;
+}
+@media (min-width: 992px) {
+  .vauban-home main .funds-section .container .row p, .vauban-home main .funds-section .container .row--2 p {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+.vauban-home main .funds-section .container .row .number-caption, .vauban-home main .funds-section .container .row--2 .number-caption {
+  margin-bottom: 0.8rem;
+}
+.vauban-home main .funds-section .container .row .number, .vauban-home main .funds-section .container .row--2 .number {
+  display: block;
+  font-family: Euclidcirculara, sans-serif;
+  font-size: 8rem;
+  line-height: 9.4rem;
+  letter-spacing: -0.4rem;
+  margin-right: 0.8rem;
+}
+@media (min-width: 992px) {
+  .vauban-home main .funds-section .container .row .number, .vauban-home main .funds-section .container .row--2 .number {
+    font-size: 9.4rem;
+    line-height: 12rem;
+    margin-right: 1rem;
+  }
+}
+.vauban-home main .investiments-section {
+  position: relative;
+  padding-top: 6.4rem;
+  background-color: #ff6f43;
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section {
+    padding-top: 8rem;
+  }
+}
+.vauban-home main .investiments-section .gray-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 23.6rem;
+  background-color: #f5f5f5;
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .gray-bg {
+    height: 20rem;
+  }
+}
+.vauban-home main .investiments-section .container {
+  position: relative;
+  z-index: 2;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .vauban-home main .investiments-section .container {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .container {
+    padding: 0 6rem;
+  }
+}
+.vauban-home main .investiments-section .container .subhead {
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .container .subhead {
+    margin-bottom: 8rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .container .subhead {
+    font-size: 2rem;
+  }
+}
+.vauban-home main .investiments-section .container .card-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .container .card-row {
+    flex-wrap: nowrap;
+  }
+}
+.vauban-home main .investiments-section .container .card-row .card {
+  flex-grow: 1;
+  width: 100%;
+  max-width: 36rem;
+  height: 50.3rem;
+  padding-bottom: 2.4rem;
+}
+.vauban-home main .investiments-section .container .card-row .card:nth-child(even) {
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .vauban-home main .investiments-section .container .card-row .card:nth-child(even) {
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .container .card-row .card:nth-child(even) {
+    padding: 0;
+  }
+}
+.vauban-home main .investiments-section .container .card-row .card + .card {
+  margin-left: 0;
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .container .card-row .card + .card {
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .vauban-home main .investiments-section .container .card-row .card {
+    height: 52.7rem;
+    max-width: 100%;
+    flex-basis: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .container .card-row .card {
+    height: 64rem;
+    padding: 0;
+    flex-basis: 25%;
+  }
+}
+.vauban-home main .investiments-section .container .card-row .card a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 2.5rem 2.5rem 7.2rem;
+  color: #fff;
+  text-decoration: none;
+  background-size: 80%;
+  background-position: 0% 80%;
+  background-repeat: no-repeat;
+  background-color: #0d0d0d;
+  transition: all 0.5s ease-out;
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .container .card-row .card a {
+    padding: 3.2rem 3.2rem 7.2rem;
+    background-size: 100%;
+  }
+}
+.vauban-home main .investiments-section .container .card-row .card a:hover {
+  background-size: 85%;
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .container .card-row .card a:hover {
+    background-size: 105%;
+  }
+}
+.vauban-home main .investiments-section .container .card-row .card a:hover h3 {
+  text-decoration-color: white;
+}
+.vauban-home main .investiments-section .container .card-row .card a .heading {
+  display: flex;
+}
+.vauban-home main .investiments-section .container .card-row .card a h3 {
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  font-family: Euclidcirculara, sans-serif;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0);
+  transition: all 0.3s ease;
+}
+@media (min-width: 992px) {
+  .vauban-home main .investiments-section .container .card-row .card a h3 {
+    font-size: 3.5rem;
+    line-height: 4.2rem;
+  }
+}
+.vauban-home main .investors-section {
+  background-color: #f5f5f5;
+  padding: 9rem 0 4rem;
+}
+@media (min-width: 768px) {
+  .vauban-home main .investors-section {
+    padding: 8rem 0 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .investors-section {
+    padding: 12rem 0 0;
+  }
+}
+.vauban-home main .investors-section .container {
+  min-height: 0;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .vauban-home main .investors-section .container {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .investors-section .container {
+    padding: 0 6rem;
+  }
+}
+.vauban-home main .investors-section .container .subhead {
+  max-width: 43rem;
+  font-size: 1.5rem;
+}
+@media (min-width: 992px) {
+  .vauban-home main .investors-section .container .subhead {
+    font-size: 2rem;
+  }
+}
+.vauban-home main .investors-section .container .rating {
+  text-decoration: none;
+  color: #1a1a1a;
+  line-height: 1.5rem;
+}
+.vauban-home main .investors-section .container .rating p {
+  margin: 0 0.4rem 0.3rem;
+  display: inline-block;
+  font-size: 1.4rem;
+  vertical-align: bottom;
+}
+.vauban-home main .investors-section .container .rating .trustpilot-logo {
+  margin: 0 0.4rem 0.3rem;
+  vertical-align: bottom;
+}
+.vauban-home main .investors-section .container .inv-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.vauban-home main .investors-section .container .inv-row .inv-img {
+  display: none;
+  width: 27.6rem;
+  height: 42rem;
+  margin-right: 13%;
+  background-image: url("https://assets.website-files.com/5ebe9ac00bb8ee01c0aa44a6/5ebe9ac00bb8eed42eaa44f3_investors-img-mob.svg");
+  background-size: 100%;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+}
+@media (min-width: 768px) {
+  .vauban-home main .investors-section .container .inv-row .inv-img {
+    display: block;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .investors-section .container .inv-row .inv-img {
+    background-image: url("https://assets.website-files.com/5ebe9ac00bb8ee01c0aa44a6/5ebe9ac00bb8ee6778aa44e9_investors-img.svg");
+    width: 49.7rem;
+    height: 49.6rem;
+    max-width: 80%;
+  }
+}
+.vauban-home main .investors-section .container .inv-row .investors-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 6rem;
+}
+@media (min-width: 768px) {
+  .vauban-home main .investors-section .container .inv-row .investors-list {
+    width: 50%;
+  }
+}
+.vauban-home main .investors-section .container .inv-row .investors-list .inv-logo-col {
+  width: 50%;
+  padding: 0 2rem 2rem 0;
+}
+.vauban-home main .investors-section .container .inv-row .investors-list .inv-logo-col img {
+  width: 10rem;
+}
+@media (min-width: 992px) {
+  .vauban-home main .investors-section .container .inv-row .investors-list .inv-logo-col img {
+    width: 16rem;
+    max-width: 100%;
+  }
+}
+.vauban-home main .get-started-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 6.4rem;
+}
+@media (min-width: 768px) {
+  .vauban-home main .get-started-section {
+    padding-top: 8rem;
+    padding-bottom: 6.2rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .get-started-section {
+    padding-top: 12rem;
+    padding-bottom: 0;
+  }
+}
+.vauban-home main .get-started-section .container {
+  min-height: 0;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .vauban-home main .get-started-section .container {
+    padding: 0 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .get-started-section .container {
+    padding: 0 6rem;
+  }
+}
+.vauban-home main .get-started-section .get-started-row {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .vauban-home main .get-started-section .get-started-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.vauban-home main .get-started-section .get-started-row .get-started-col--txt {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6rem;
+}
+@media (min-width: 992px) {
+  .vauban-home main .get-started-section .get-started-row .get-started-col--txt {
+    padding-bottom: 12rem;
+    margin-bottom: 0rem;
+  }
+}
+.vauban-home main .get-started-section .get-started-row .get-started-col--img {
+  width: 303px;
+  height: 211px;
+  max-width: 100%;
+  margin-left: 0;
+  margin-top: 2.4rem;
+  align-self: center;
+}
+@media (min-width: 768px) {
+  .vauban-home main .get-started-section .get-started-row .get-started-col--img {
+    width: 274px;
+    height: 27.4rem;
+    margin-left: 4.3rem;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home main .get-started-section .get-started-row .get-started-col--img {
+    margin-top: 0;
+    width: 627px;
+    height: 485px;
+    max-width: 50%;
+  }
+}
+.vauban-home main .get-started-section .subhead {
+  flex: 1;
+  font-size: 1.5rem;
+  margin-bottom: 8rem;
+}
+@media (min-width: 992px) {
+  .vauban-home main .get-started-section .subhead {
+    font-size: 2rem;
+  }
+}
+.vauban-home main .get-started-section .locations-img {
+  width: 100%;
+  height: 100%;
+  background-image: url("https://assets.website-files.com/5ebe9ac00bb8ee01c0aa44a6/5ebe9ac00bb8eedaacaa44ee_main-img-2.svg");
+  background-size: 100%;
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+}
+.vauban-home .vauban-footer {
+  padding: 4.8rem 0;
+  background-color: #000;
+  font-size: 1.4rem;
+}
+.vauban-home .vauban-footer .container {
+  min-height: 0;
+  padding: 0 2rem;
+}
+.vauban-home .vauban-footer .container .footer-heading, .vauban-home .vauban-footer .container .footer-heading--2 {
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: #fff;
+  margin-bottom: 2.4rem;
+}
+.vauban-home .vauban-footer .container .footer-heading--2 {
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
+.vauban-home .vauban-footer .container .footer-row, .vauban-home .vauban-footer .container .footer-row--2 {
+  display: block;
+}
+@media (min-width: 576px) {
+  .vauban-home .vauban-footer .container .footer-row, .vauban-home .vauban-footer .container .footer-row--2 {
+    display: flex;
+  }
+}
+.vauban-home .vauban-footer .container .footer-row--2 {
+  padding-bottom: 1rem;
+}
+.vauban-home .vauban-footer .container .footer-row .footer-col, .vauban-home .vauban-footer .container .footer-row--2 .footer-col {
+  width: 100%;
+}
+@media (min-width: 576px) {
+  .vauban-home .vauban-footer .container .footer-row .footer-col, .vauban-home .vauban-footer .container .footer-row--2 .footer-col {
+    padding-right: 1.5rem;
+    width: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .vauban-home .vauban-footer .container .footer-row .footer-col, .vauban-home .vauban-footer .container .footer-row--2 .footer-col {
+    padding-right: 6.4rem;
+  }
+}
+.vauban-home .vauban-footer .container .footer-row .footer-col .registration, .vauban-home .vauban-footer .container .footer-row--2 .footer-col .registration {
+  margin-bottom: 2.4rem;
+  max-width: 36.7rem;
+}
+.vauban-home .vauban-footer .container .footer-row .footer-col p, .vauban-home .vauban-footer .container .footer-row--2 .footer-col p {
+  color: #888;
+}
+.vauban-home .vauban-footer .container .footer-row .footer-col a, .vauban-home .vauban-footer .container .footer-row--2 .footer-col a {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  color: #dbdbdb;
+  text-decoration: none;
+  margin-bottom: 1.6rem;
+}
+.vauban-home .vauban-footer .container .footer-row .footer-col .footer-menu-row, .vauban-home .vauban-footer .container .footer-row--2 .footer-col .footer-menu-row {
+  margin-top: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 576px) {
+  .vauban-home .vauban-footer .container .footer-row .footer-col .footer-menu-row, .vauban-home .vauban-footer .container .footer-row--2 .footer-col .footer-menu-row {
+    margin-top: 0;
+  }
+}
+.vauban-home .vauban-footer .container .footer-row .footer-col .footer-menu-row .footer-menu-col, .vauban-home .vauban-footer .container .footer-row--2 .footer-col .footer-menu-row .footer-menu-col {
+  width: 50%;
+  padding: 0 3.2rem 4.8rem 0;
+}
+@media (min-width: 992px) {
+  .vauban-home .vauban-footer .container .footer-row .footer-col .footer-menu-row .footer-menu-col, .vauban-home .vauban-footer .container .footer-row--2 .footer-col .footer-menu-row .footer-menu-col {
+    width: 33.3%;
+    padding: 1.6rem 3.2rem 0 0;
+  }
+}
+.vauban-home .link-arrow a {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: Euclidcirculara, sans-serif;
+  color: #ff6f43;
+  text-decoration: none;
+}
+.vauban-home .link-arrow .arrow {
+  display: inline-block;
+  position: relative;
+  height: 0.6rem;
+  width: 0.6rem;
+  margin-left: 0.6rem;
+  vertical-align: middle;
+}
+.vauban-home .link-arrow .arrow::before, .vauban-home .link-arrow .arrow::after {
+  content: "";
+  position: absolute;
+  display: block;
+}
+.vauban-home .link-arrow .arrow::before {
+  background-color: #ff6f43;
+  height: 2px;
+  top: 0;
+  left: 0;
+  width: 110%;
+}
+.vauban-home .link-arrow .arrow::after {
+  top: -3px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-width: 2px 2px 0 0;
+  border-style: solid;
+  border-color: #ff6f43;
+  transform: rotate(45deg);
+}
+.vauban-home .lines-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  display: flex;
+  justify-content: space-around;
+}
+.vauban-home .lines-bg .line-bg {
+  width: 0.1rem;
+  background-color: rgba(238, 238, 238, 0.5);
+}
+.vauban-home .lines-bg .hide-on-mobile {
+  display: none;
+}
+@media (min-width: 768px) {
+  .vauban-home .lines-bg .hide-on-mobile {
+    display: block;
+  }
+}
+.vauban-home .lines-bg .hide-on-tablet {
+  display: none;
+}
+@media (min-width: 992px) {
+  .vauban-home .lines-bg .hide-on-tablet {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NerdityArt00 su Etsy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="./scss/global.css">
+</head>
+<body class="container-xl nerdityart-page">
+    <header class="row">
+        <div class="col d-flex">
+            <img class="profile-pic" src="./img/profile-pic.jpg" alt="Immagine del profilo">
+            <div class="profile-info">
+                <h1>NerdityArt00</h1>
+                <p>Italia</p>
+                <a href="#">35 vendite</a>
+                <span> | </span>
+                <a class="rating" href="#">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </a>
+            </div>
+        </div>
+        <div class="col d-md-flex justify-content-end d-none">
+            <div class="artist-info">
+                <a href="#">
+                    <img class="artist-pic" src="./img/artist-pic.jpg" alt="Foto del profilo di Cinzia">
+                    <p>Cinzia</p>
+                </a>
+                <a class="btn rounded-btn small-btn" href="#">
+                    <svg class="d-inline-block" width="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21,4H3C2.447,4,2,4.447,2,5v12c0,0.553,0.447,1,1,1h8.649l4.726,3.781C16.556,21.926,16.777,22,17,22 c0.147,0,0.296-0.032,0.434-0.099C17.779,21.734,18,21.385,18,21v-3h3c0.553,0,1-0.447,1-1V5C22,4.447,21.553,4,21,4z M18.086,6 L12,10.733L5.914,6H18.086z M17,16h-1v1v1.919l-3.375-2.7C12.447,16.077,12.228,16,12,16H4V7.045l7.386,5.744 C11.566,12.93,11.783,13,12,13s0.434-0.07,0.614-0.211L20,7.045V16H17z"></path></svg>
+                    <p class="d-inline-block">Contatta</p>
+                </a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-6">
+                <h2 class="article-title">articoli</h2>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+                <div class="dropdown">
+                    <button class="btn rounded-btn big-btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Ordina: Più recente
+                    </button>
+                    <div class="dropdown-menu dropdown-container" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item active" href="#">Più recente</a>
+                      <a class="dropdown-item" href="#">Prezzo più basso</a>
+                      <a class="dropdown-item" href="#">Prezzo più alto</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-3 aside">
+                <form class="search-item">
+                    <div class="search-input d-flex">
+                        <input type="search" placeholder="Cerca articoli" aria-label="Search">
+                        <button class="btn search-btn" type="submit">
+                            <svg width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                <path d="M10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18ZM10,4a6,6,0,1,0,6,6A6.007,6.007,0,0,0,10,4Z"></path><path d="M21,22a1,1,0,0,1-.707-0.293l-4-4a1,1,0,0,1,1.414-1.414l4,4A1,1,0,0,1,21,22Z"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <ul class="categories">
+                    <li>
+                        <a href="#">
+                            <div class="category d-flex justify-content-between">
+                                <p>Tutto</p>
+                                <p>32</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="category d-flex justify-content-between">
+                                <p>David Lynch</p>
+                                <p>6</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="category d-flex justify-content-between active">
+                                <p>Miniatures</p>
+                                <p>6</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="category d-flex justify-content-between">
+                                <p>Original art</p>
+                                <p>4</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <a class="btn contact-btn" href="#">
+                    <svg width="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21,4H3C2.447,4,2,4.447,2,5v12c0,0.553,0.447,1,1,1h8.649l4.726,3.781C16.556,21.926,16.777,22,17,22 c0.147,0,0.296-0.032,0.434-0.099C17.779,21.734,18,21.385,18,21v-3h3c0.553,0,1-0.447,1-1V5C22,4.447,21.553,4,21,4z M18.086,6 L12,10.733L5.914,6H18.086z M17,16h-1v1v1.919l-3.375-2.7C12.447,16.077,12.228,16,12,16H4V7.045l7.386,5.744 C11.566,12.93,11.783,13,12,13s0.434-0.07,0.614-0.211L20,7.045V16H17z"></path></svg>
+                    Contatta il proprietario del negozio
+                </a>
+                <div class="dropdown-divider divider"></div>
+                <div class="bottom-links">
+                    <a href="#">35 vendite</a>
+                    <a class="d-block" href="#">16 ammiratori</a>
+                    <div class="dropdown-divider divider"></div>
+                    <a href="#">Segnala questo negozio a Etsy</a>
+                </div>
+            </div>
+            <div class="col-12 col-lg">
+                <div class="row product-gallery">
+                    <div class="product col-6 col-md-4 col-xl-3">
+                        <button class="btn favourite"></button>
+                        <a href="">
+                            <img src="./img/product-1.jpg" alt="Prints of 8 e mezzo">
+                            <h3>Prints of 8 e mezzo</h3>
+                            <p>€16,00</p>
+                        </a>
+                    </div>
+                    <div class="product col-6 col-md-4 col-xl-3">
+                        <button class="btn favourite"></button>
+                        <a href="">
+                            <img src="./img/product-2.jpg" alt="Prints of Modern Times">
+                            <h3>Prints of Modern Times</h3>
+                            <p>€16,00</p>
+                        </a>
+                    </div>
+                    <div class="product col-6 col-md-4 col-xl-3">
+                        <button class="btn favourite"></button>
+                        <a href="">
+                            <img src="./img/product-3.jpg" alt="Prints of Caro Diario - Nanni Moretti">
+                            <h3>Prints of Caro Diario - Nanni Moretti</h3>
+                            <p>€16,00</p>
+                        </a>
+                    </div>
+                    <div class="product col-6 col-md-4 col-xl-3">
+                        <button class="btn favourite"></button>
+                        <a href="">
+                            <img src="./img/product-4.jpg" alt="Prints of Vertigo">
+                            <h3>Prints of Vertigo</h3>
+                            <p>€16,00</p>
+                        </a>
+                    </div>
+                    <div class="product col-6 col-md-4 col-xl-3">
+                        <button class="btn favourite"></button>
+                        <a href="">
+                            <img src="./img/product-5.jpg" alt="Prints of Moonrise Kingdom">                    
+                            <h3>Prints of Moonrise Kingdom</h3>
+                            <p>€16,00</p>
+                        </a>
+                    </div>
+                    <div class="product col-6 col-md-4 col-xl-3">
+                        <button class="btn favourite"></button>
+                        <a href="">
+                            <img src="./img/product-6.jpg" alt="Prints of Manhattan">
+                            <h3>Prints of Manhattan</h3>
+                            <p>€16,00</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>    
+</body>
+</html>

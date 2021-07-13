@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.wacom-home .main-container {
+  max-width: 140rem;
+  border: solid #e7e7e7;
+  border-width: 0 1px 0 1px;
+}
+.wacom-home .main-container .carousel {
+  margin: 4rem auto;
+  padding: 0 2.5rem;
+  max-width: 124rem;
+}
+.wacom-home .main-container .carousel .carousel-item {
+  position: relative;
+  padding: 0 4rem 10rem;
+  transition: transform 0.6s cubic-bezier(0.2, 0.5, 0.2, 1);
+}
+.wacom-home .main-container .carousel .carousel-item .caption {
+  margin-top: 4rem;
+}
+.wacom-home .main-container .carousel .carousel-item .caption h3 {
+  margin: 2.3rem 0 1rem 0;
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+.wacom-home .main-container .carousel .carousel-item .caption p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 1.3rem 0;
+  line-height: 2.5rem;
+}
+.wacom-home .main-container .carousel .carousel-item .caption .chromebook-logo {
+  margin: 1rem 0 2rem 0;
+}
+.wacom-home .main-container .carousel .carousel-item .caption .e-learning-icon {
+  margin: 2rem 0 1rem 0;
+}
+.wacom-home .main-container .carousel .carousel-item .caption .circle {
+  margin: 0 1rem;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid #0097d4;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.wacom-home .main-container .carousel .carousel-item .caption .circle::before, .wacom-home .main-container .carousel .carousel-item .caption .circle::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  border-bottom: 2px solid #0097d4;
+  border-right: 2px solid #0097d4;
+  border-bottom-right-radius: 4px;
+  width: 0.8rem;
+  height: 0.8rem;
+  transition: transform 0.3s ease;
+}
+.wacom-home .main-container .carousel .carousel-item .caption .circle::before {
+  transform: rotate(-45deg);
+}
+.wacom-home .main-container .carousel .carousel-item .caption .circle::after {
+  transform: translateX(2rem) rotate(-45deg);
+}
+.wacom-home .main-container .carousel .carousel-item .caption a {
+  display: block;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #0097d4;
+  text-decoration: none;
+}
+.wacom-home .main-container .carousel .carousel-item .caption a:hover {
+  color: #0085bb;
+}
+.wacom-home .main-container .carousel .carousel-item .caption a:hover .circle {
+  border-color: inherit;
+}
+.wacom-home .main-container .carousel .carousel-item .caption a:hover .circle::before {
+  transform: translateX(-2rem) rotate(-45deg);
+  border-color: inherit;
+}
+.wacom-home .main-container .carousel .carousel-item .caption a:hover .circle::after {
+  transform: translateX(0) rotate(-45deg);
+  border-color: inherit;
+}
+.wacom-home .main-container .carousel .carousel-item .caption a p {
+  display: inline;
+}
+@media (min-width: 992px) {
+  .wacom-home .main-container .carousel .carousel-item .caption {
+    position: absolute;
+    width: 40%;
+  }
+}
+.wacom-home .main-container .carousel .carousel-item .desktop-img {
+  height: 34.5rem;
+  float: right;
+}
+@media (min-width: 1200px) {
+  .wacom-home .main-container .carousel .carousel-item .desktop-img {
+    height: 41.6rem;
+  }
+}
+.wacom-home .main-container .carousel .carousel-item .mobile-img {
+  width: 100%;
+}
+.wacom-home .main-container .carousel .carousel-control-next, .wacom-home .main-container .carousel .carousel-control-prev {
+  background-color: #fff;
+  opacity: 0.75;
+  width: 4.4rem;
+  height: 4.4rem;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.wacom-home .main-container .carousel .carousel-control-next:hover, .wacom-home .main-container .carousel .carousel-control-prev:hover {
+  opacity: 1;
+}
+.wacom-home .main-container .carousel .carousel-control-next span, .wacom-home .main-container .carousel .carousel-control-prev span {
+  opacity: 1;
+  border-bottom: 2px solid #333;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.wacom-home .main-container .carousel .carousel-control-next span {
+  border-right: 2px solid #333;
+  transform: translatex(-25%) rotate(-45deg);
+}
+.wacom-home .main-container .carousel .carousel-control-prev span {
+  border-left: 2px solid #333;
+  transform: translatex(25%) rotate(45deg);
+}
+.wacom-home .main-container .carousel .carousel-indicators .active {
+  opacity: 1;
+}
+.wacom-home .main-container .carousel .carousel-indicators li {
+  background-color: #333;
+  opacity: 0.15;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  transition: none;
+}
+.wacom-home .main-container .link-gallery {
+  margin: auto;
+  max-width: 120rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.wacom-home .main-container .link-gallery a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #000;
+}
+.wacom-home .main-container .link-gallery .box, .wacom-home .main-container .link-gallery .box--assistence, .wacom-home .main-container .link-gallery .box--flows, .wacom-home .main-container .link-gallery .box--solutions, .wacom-home .main-container .link-gallery .box--ink, .wacom-home .main-container .link-gallery .box--inkspace, .wacom-home .main-container .link-gallery .box--elearning, .wacom-home .main-container .link-gallery .box--shop2, .wacom-home .main-container .link-gallery .box--experience, .wacom-home .main-container .link-gallery .box--shop, .wacom-home .main-container .link-gallery .box--explore {
+  overflow: hidden;
+  position: relative;
+  padding: 2rem;
+  min-height: 23.3rem;
+}
+.wacom-home .main-container .link-gallery .box h3, .wacom-home .main-container .link-gallery .box--assistence h3, .wacom-home .main-container .link-gallery .box--flows h3, .wacom-home .main-container .link-gallery .box--solutions h3, .wacom-home .main-container .link-gallery .box--ink h3, .wacom-home .main-container .link-gallery .box--inkspace h3, .wacom-home .main-container .link-gallery .box--elearning h3, .wacom-home .main-container .link-gallery .box--shop2 h3, .wacom-home .main-container .link-gallery .box--experience h3, .wacom-home .main-container .link-gallery .box--shop h3, .wacom-home .main-container .link-gallery .box--explore h3 {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+.wacom-home .main-container .link-gallery .box p, .wacom-home .main-container .link-gallery .box--assistence p, .wacom-home .main-container .link-gallery .box--flows p, .wacom-home .main-container .link-gallery .box--solutions p, .wacom-home .main-container .link-gallery .box--ink p, .wacom-home .main-container .link-gallery .box--inkspace p, .wacom-home .main-container .link-gallery .box--elearning p, .wacom-home .main-container .link-gallery .box--shop2 p, .wacom-home .main-container .link-gallery .box--experience p, .wacom-home .main-container .link-gallery .box--shop p, .wacom-home .main-container .link-gallery .box--explore p {
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+.wacom-home .main-container .link-gallery .box::before, .wacom-home .main-container .link-gallery .box--assistence::before, .wacom-home .main-container .link-gallery .box--flows::before, .wacom-home .main-container .link-gallery .box--solutions::before, .wacom-home .main-container .link-gallery .box--ink::before, .wacom-home .main-container .link-gallery .box--inkspace::before, .wacom-home .main-container .link-gallery .box--elearning::before, .wacom-home .main-container .link-gallery .box--shop2::before, .wacom-home .main-container .link-gallery .box--experience::before, .wacom-home .main-container .link-gallery .box--shop::before, .wacom-home .main-container .link-gallery .box--explore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: transform 0.3s ease;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wacom-home .main-container .link-gallery .box:hover::before, .wacom-home .main-container .link-gallery .box--assistence:hover::before, .wacom-home .main-container .link-gallery .box--flows:hover::before, .wacom-home .main-container .link-gallery .box--solutions:hover::before, .wacom-home .main-container .link-gallery .box--ink:hover::before, .wacom-home .main-container .link-gallery .box--inkspace:hover::before, .wacom-home .main-container .link-gallery .box--elearning:hover::before, .wacom-home .main-container .link-gallery .box--shop2:hover::before, .wacom-home .main-container .link-gallery .box--experience:hover::before, .wacom-home .main-container .link-gallery .box--shop:hover::before, .wacom-home .main-container .link-gallery .box--explore:hover::before {
+  transform: scale(1.1);
+}
+.wacom-home .main-container .link-gallery .box--explore::before {
+  background-image: url("https://wcm-cdn.wacom.com/-/media/images/tiles/homepage-2020/explore tile.jpg?h=240&la=it&w=480&hash=0B1E1563DF29708B0B988A90C0387FA7");
+}
+.wacom-home .main-container .link-gallery .box--shop::before {
+  background-image: url("https://wcm-cdn.wacom.com/-/media/images/tiles/homepage-2020/about wacom tile.jpg?h=240&la=it&w=240&hash=E8F61CCFB2A5D92395BCC1B1DCBF8452");
+}
+.wacom-home .main-container .link-gallery .box--experience::before {
+  background-image: url("https://wcm-cdn.wacom.com/-/media/images/tiles/homepage-2020/wacom_experience_center_tile.jpg?h=240&la=it&w=240&hash=CF5F042C0EE450833D69043BDB60FE06");
+}
+.wacom-home .main-container .link-gallery .box--shop2::before {
+  background-image: url("https://wcm-cdn.wacom.com/-/media/images/tiles/homepage-2020/shop tile v2.jpg?h=240&la=it&w=240&hash=E4383ED8138713DECB00F15F4B662B84");
+}
+.wacom-home .main-container .link-gallery .box--elearning::before {
+  background-image: url("https://wcm-cdn.wacom.com/-/media/images/tiles/homepage-2020/e-learning tile.jpg?h=480&la=it&w=480&hash=974313A68AF005172A93263BDC39FA44");
+}
+.wacom-home .main-container .link-gallery .box--inkspace::before {
+  background-image: url("https://wcm-cdn.wacom.com/-/media/images/tiles/homepage-2020/inkspace tile.jpg?h=480&la=it&w=480&hash=797054562BC8A9B6E25D41A95A287783");
+}
+.wacom-home .main-container .link-gallery .box--ink::before {
+  background-image: url("https://wcm-cdn.wacom.com/-/media/images/tiles/homepage-2020/will tile v2.jpg?h=480&la=it&w=240&hash=9F41FE1AA9E9F66FF32C75211EA1E518");
+}
+.wacom-home .main-container .link-gallery .box--solutions::before {
+  background-image: url("https://wcm-cdn.wacom.com/-/media/images/tiles/homepage-2020/technology solutions tile 11.jpg?h=240&la=it&w=480&hash=FE5B5C3C091D79A4BB2B855546ACB02B");
+}
+.wacom-home .main-container .link-gallery .box--flows::before {
+  background-image: url("https://wcm-cdn.wacom.com/-/media/images/tiles/homepage-2020/business enterprise tile v2.jpg?h=240&la=it&w=480&hash=FB8C31D4546B381729F439500B9F8C2F");
+}
+.wacom-home .main-container .link-gallery .box--assistence::before {
+  background-image: url("https://wcm-cdn.wacom.com/-/media/images/tiles/homepage-2020/support tile v2.jpg?h=240&la=it&w=240&hash=B369903B697F1353BC7D96FE4761A16A");
+}
+@media (min-width: 576px) {
+  .wacom-home .main-container .link-gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .wacom-home .main-container .link-gallery {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+  .wacom-home .main-container .link-gallery .box, .wacom-home .main-container .link-gallery .box--explore, .wacom-home .main-container .link-gallery .box--shop, .wacom-home .main-container .link-gallery .box--experience, .wacom-home .main-container .link-gallery .box--shop2, .wacom-home .main-container .link-gallery .box--elearning, .wacom-home .main-container .link-gallery .box--inkspace, .wacom-home .main-container .link-gallery .box--ink, .wacom-home .main-container .link-gallery .box--solutions, .wacom-home .main-container .link-gallery .box--flows, .wacom-home .main-container .link-gallery .box--assistence {
+    width: 100%;
+  }
+  .wacom-home .main-container .link-gallery .box--elearning {
+    grid-row: 2/4;
+  }
+  .wacom-home .main-container .link-gallery .box--inkspace {
+    grid-column: 2/4;
+    grid-row: 2/4;
+  }
+  .wacom-home .main-container .link-gallery .box--ink {
+    grid-row: 2/4;
+  }
+  .wacom-home .main-container .link-gallery .box--flows {
+    grid-column: 2/4;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

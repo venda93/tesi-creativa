@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+.hero-ventennale {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #e5e5e5; }
+  .hero-ventennale .ventennale-img-container {
+    max-width: 1440px;
+    margin: auto;
+    position: relative; }
+  .hero-ventennale figure {
+    margin-bottom: 0; }
+    .hero-ventennale figure img {
+      max-width: 100%; }
+  .hero-ventennale .ventennale-overlay {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: absolute;
+    bottom: 15rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 79%; }
+    .hero-ventennale .ventennale-overlay img {
+      width: 25rem; }
+  .hero-ventennale h1 {
+    text-align: center;
+    color: #044f94;
+    font-family: "Open Sans Condensed", sans-serif;
+    font-size: 3.6rem;
+    margin: 0; }
+  .hero-ventennale a {
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #a11e21;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.5rem;
+    background-color: white;
+    border-radius: 3rem;
+    padding: 1.9rem 2.8rem 2.1rem;
+    transition: 0.35s ease background-color, 0.35s ease color; }
+    .hero-ventennale a:hover {
+      color: white;
+      background-color: #a11e21; }
+  @media screen and (max-width: 1440px) {
+    .hero-ventennale a {
+      font-size: 1vw;
+      padding: 1.3vw 1.9vw 1.5vw;
+      border-radius: 2.1vw; }
+    .hero-ventennale h1 {
+      font-size: 2.5vw; }
+    .hero-ventennale .ventennale-overlay {
+      bottom: 10.4vw; }
+      .hero-ventennale .ventennale-overlay img {
+        width: 17.4vw; } }
+  @media screen and (max-width: 768px) {
+    .hero-ventennale figure img {
+      width: 100%; }
+    .hero-ventennale .ventennale-overlay {
+      display: block;
+      margin: auto;
+      text-align: center;
+      top: 7.5vw; }
+      .hero-ventennale .ventennale-overlay img {
+        width: 54.1vw; }
+    .hero-ventennale h1 {
+      font-size: 7.2vw;
+      line-height: 8vw;
+      margin-top: 5.3vw; }
+    .hero-ventennale a {
+      display: inline-block;
+      margin-top: 66.3vw;
+      font-size: 4vw;
+      padding: 5.1vw 7.5vw 5.6vw;
+      border-radius: 8vw; } }
+  @media screen and (min-width: 768px) {
+    .hero-ventennale .breakline {
+      display: none; } }
