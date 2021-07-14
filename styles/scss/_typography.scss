@@ -35,6 +35,7 @@ li .link {
 }
 .h2 {
   font-size: 2rem;
+  margin-bottom: 3rem;
   @include media.tablet {
     font-size: 3rem;
   }
